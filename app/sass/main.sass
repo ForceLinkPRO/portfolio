@@ -38,19 +38,30 @@ a
     background-image: url('../img/bg-btn-info.svg')
     background-repeat: no-repeat
     background-size: cover
-    height: 9rem
-    width: 9rem
-
-.box-info
+    height: 90px
+    width: 90px
+.box-info    
   z-index: 999
-  display: none
+  opacity: 0
+  transition: all 0.1s
   position: fixed
   right: 0
-  top: 9rem
+  top: 90px
   color: $white
   background-color: rgba($dark, 0.7)
-  width: 28.3rem
-  height: 13rem
+  width: 283px
+  height: 130px
+  font-weight: 300
+  font-size:  16px
+  padding-top: 10px
+  p
+    padding-left: 31px
+    margin-bottom: 17px
+  i
+    margin-right: 15px
+    font-size: 18px
+  a:hover
+    text-decoration: underline 
 
 .sidebar
   padding-bottom: 32px
@@ -219,10 +230,19 @@ a
     flex: 1
     position: relative
     transition: all .2s ease
-    cursor: pointer
     flex-basis: calc(400px)
+    &:hover .portfolio-info
+      opacity: 1
   img
     width: 100%
+  &-info
+    width: 100%
+    height: 100%
+    transition: all .2s ease
+    opacity: 1
+    background-color: $active-color
+    position: absolute
+    color: $white
 
 
 
