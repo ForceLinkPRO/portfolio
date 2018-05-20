@@ -46,6 +46,18 @@ a {
             background-size: cover;
     height: 90px;
     width: 90px; }
+  .btn-open-img {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+    background-image: url("../img/open-image.svg"); }
+    .btn-open-img:hover {
+      cursor: pointer;
+      width: 75px;
+      height: 75px; }
 
 .box-info {
   z-index: 999;
@@ -303,6 +315,8 @@ a {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+  .portfolio img {
+    width: 100%; }
   .portfolio-item {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -316,19 +330,42 @@ a {
         -ms-flex-preferred-size: calc(400px);
             flex-basis: calc(400px); }
     .portfolio-item:hover .portfolio-info {
-      opacity: 1; }
-  .portfolio img {
-    width: 100%; }
+      opacity: 0.9; }
   .portfolio-info {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px;
     width: 100%;
     height: 100%;
-    -webkit-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
-    opacity: 1;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
     background-color: #2db8b7;
     position: absolute;
-    color: #fff; }
+    color: #fff;
+    text-align: center; }
+    .portfolio-info h3 {
+      font-weight: 400;
+      font-size: 30px; }
+    .portfolio-info hr {
+      border: 0.5px solid #fff;
+      width: 45%;
+      margin-top: 20px;
+      margin-bottom: 14px; }
 
 @media (max-width: 1700px) {
   html {
