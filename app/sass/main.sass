@@ -129,16 +129,20 @@ a
     display: flex
     justify-content: flex-end
     align-items: center
-    img
-      height: 60%
-      margin-right: 20px
     background-color: rgba($dark, 0.41)
+    transition: all 0.3s
     opacity: 0.41
     height: 54px
     width: 100%
+    img
+      transition: all 0.3s
+      height: 60%
+      margin-right: 20px
     &:hover
       opacity: 1
       cursor: pointer
+    &:hover img
+      margin-right: 25px
   &-social
     display: -webkit-flex
     display: -moz-flex
@@ -158,8 +162,8 @@ a
       background-color: $dark
 
 .content
-  overflow: auto;
-  height: 100vh
+  // overflow: auto;
+  // height: 100vh
   &-filter
     background-color: $white
     display: -webkit-flex
@@ -234,6 +238,8 @@ a
           color: $filt-active
 
 .portfolio
+  overflow: auto;
+  height: calc(100vh - 90px)
   line-height: 0
   display: flex
   flex-wrap: wrap
