@@ -1,0 +1,48 @@
+@media (max-width:1700px)
+  html
+    font-size: 9px
+  .sidebar
+    .top
+      padding: 0 4rem
+
+@media (max-width:1040px)
+  .sidebar
+    .top
+      padding: 0 4rem
+
+@media (max-width:985px)
+  .content
+    &-filter
+      padding: 0
+      span
+        display: block
+        padding-left: 4rem
+      .mobile
+        display: block
+        cursor: pointer
+      ul
+        display: none
+        flex-wrap: wrap
+        justify-content: center
+        text-align: center
+        li
+          flex: 1
+          min-width: 33%
+          letter-spacing: .05rem
+  .btn
+    &-info
+      display: none
+@media (max-width:720px)
+  body
+    flex-direction: column
+  .content
+    overflow: hidden;
+    height: 100%
+    &-filter
+      .mobile
+        display: block
+      ul
+        left: 0
+  .sidebar
+    height: 100%
+

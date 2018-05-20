@@ -1,0 +1,220 @@
+@import "colors"
+
+html
+  font-size: 10px
+
+body
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  background-color: $body-bg  
+  font-family: 'Open Sans', sans-serif
+  color: $dark
+  font-weight: 400
+a
+  color: $white
+  text-decoration: none
+.btn
+  transition: all 0.1s
+  background-color: $active-color
+  text-align: center
+  cursor: pointer
+  &-primary
+    width: 100%
+    padding: 1.4rem 0
+    margin-bottom: 1.2rem
+    border-radius: 1rem
+    font-size: 1.4rem
+    font-weight: 700
+    &:hover
+      font-weight: 400
+      background-color: transparent
+      outline: 1px solid $active-color
+      color: $active-color
+  &-info
+    background-color: $active-color
+    background-image: url('../img/bg-btn-info.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 9rem
+    width: 9rem
+
+.box-info
+  z-index: 999
+  display: none
+  position: fixed
+  right: 0
+  top: 9rem
+  color: $white
+  background-color: rgba($dark, 0.7)
+  width: 28.3rem
+  height: 13rem
+
+.sidebar
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  flex: 1
+  flex-grow: 1
+  font-size: 1.4rem
+  background-color: $sidebar-bg
+  box-shadow: 0 0 50px $dark
+  z-index: 999
+  color: $white
+  .top
+    padding: 0 7rem
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: column
+    align-items: center
+  .face
+    width: 14.7rem
+    margin-top: 5.2rem
+    border: 0.4rem solid $active-color
+    border-radius: 50%
+    margin-bottom: 3rem
+  h1,h3
+    font-size: 2rem
+    margin: 0
+  h3
+    font-weight: 300
+    line-height: 2.4rem
+  p
+    margin-top: 2rem
+    line-height: 1.68rem
+    font-size: 1.4rem
+    margin-bottom: 3.6rem
+  p:last-child
+    color: #6b7072
+    font-weight: 400
+    font-size: 1.2rem
+    margin-top: 1rem
+  &-btnhide
+    background-color: $dark
+    width: 25%
+    position: fixed
+    bottom: 3rem
+    height: 5.4rem
+  &-social
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: center
+  .fab
+    text-align: center
+    padding-top: 10px
+    border-radius: 50%
+    background-color: rgba($dark, 0.5)
+    width: 3.6rem
+    height: 2.6rem
+    margin-right: 0.5rem
+    &:hover
+      background-color: $dark
+
+.content
+  overflow: auto;
+  height: 100vh
+  flex: 4
+  &-filter
+    background-color: $white
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 9rem
+    padding-left: 45px
+    .mobile
+      display: none
+      width: 90px
+      margin-left: 10px
+      line-height: 90px
+      text-align: center
+      background-color: $active-color
+      color: $white
+      font-size: 30px
+    .left
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      align-items: center
+    span
+      color: $active-color
+      font-weight: 300
+      font-size: 19px
+    img
+      margin-left: .5rem
+      width: 1.7rem
+      height: 1.5rem
+    ul
+      list-style: none
+      color: #9fa3a7
+      font-size: 1.2rem
+      text-transform: uppercase
+      letter-spacing: .25rem
+      font-weight: 700
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      .active
+        color: $filt-active
+        border: 2px solid $active-color
+        border-radius: 12px
+        padding: .5rem
+        &:hover
+          margin-left: 0
+          margin-right: 4rem
+      li
+        margin-right: 4rem
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        &:hover
+          transition: all 0.1s
+          margin-left: -0.7rem
+          margin-right: 3.3rem
+          cursor: pointer
+          border: 2px solid $active-color
+          border-radius: 12px
+          padding: .5rem
+          color: $filt-active
+
+.portfolio
+  line-height: 0
+  display: flex
+  flex-wrap: wrap
+  &-item
+    flex: 1
+    position: relative
+    transition: all .2s ease
+    cursor: pointer
+    flex-basis: calc(400px)
+  img
+    width: 100%
+
+
+
+
+
+@import "media"
