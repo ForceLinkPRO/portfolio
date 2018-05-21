@@ -1,3 +1,16 @@
+var StatusBtnHide = true;
+function Show() {
+  if(StatusBtnHide) {
+    $(".sidebar").hide();
+    $(".sidebar-btnhide-new").show().css("display", "flex");
+    StatusBtnHide = false;
+  } else {
+    $(".sidebar").show();
+    $(".sidebar-btnhide-new").hide();
+    StatusBtnHide = true;
+  }
+};
+
 $(document).ready(function(){
 isMobile = {
         Android: function() {
@@ -19,6 +32,17 @@ isMobile = {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     };
+
+  $(".btn-open-img").click(function(){
+    var img = $(this).closest(".portfolio-item").find("img");
+    var src = img.attr('src');
+    $("body").prepend('<div class="popup"><img src="'+src+'" alt="Просматриваемая картинка" /></div>');
+  });
+
+  $(".popup").click(function(){
+    alert("ss");
+  });
+
   $(".btn-filter").click(function() {
     var value = $(this).attr("data-filter");
     if (value == "all") {
@@ -75,17 +99,3 @@ isMobile = {
   });
 
 });
-
-var StatusBtnHide = true;
-
-function Show() {
-  if(StatusBtnHide) {
-    $(".sidebar").hide();
-    $(".sidebar-btnhide-new").show().css("display", "flex");
-    StatusBtnHide = false;
-  } else {
-    $(".sidebar").show();
-    $(".sidebar-btnhide-new").hide();
-    StatusBtnHide = true;
-  }
-};
