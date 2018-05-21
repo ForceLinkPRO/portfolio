@@ -61,7 +61,7 @@ isMobile = {
       $(boxInfo).css("opacity", "0");
     }
   });
-var StatusMenu = false;
+  var StatusMenu = false;
   $(".mobile").click(function (){
     if(StatusMenu){
       $(".content-filter span").css("opacity", "1");
@@ -73,4 +73,19 @@ var StatusMenu = false;
       StatusMenu = true;
     }
   });
+
 });
+
+var StatusBtnHide = true;
+
+function Show() {
+  if(StatusBtnHide) {
+    $(".sidebar").hide();
+    $(".sidebar-btnhide-new").show().css("display", "flex");
+    StatusBtnHide = false;
+  } else {
+    $(".sidebar").show();
+    $(".sidebar-btnhide-new").hide();
+    StatusBtnHide = true;
+  }
+};

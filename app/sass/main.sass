@@ -143,6 +143,18 @@ a
       cursor: pointer
     &:hover img
       margin-right: 25px
+    &-new
+      display: none
+      position: fixed
+      bottom: 32px
+      left: 0
+      width: 97px
+      z-index: 999
+      opacity: 0.7
+      transform: rotateY( 180deg)
+      &:hover img
+        margin-right: 15px
+
   &-social
     display: -webkit-flex
     display: -moz-flex
@@ -162,8 +174,6 @@ a
       background-color: $dark
 
 .content
-  // overflow: auto;
-  // height: 100vh
   &-filter
     background-color: $white
     display: -webkit-flex
@@ -238,10 +248,16 @@ a
           color: $filt-active
 
 .portfolio
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: flex-start
+  align-content: flex-start
   overflow: auto;
   height: calc(100vh - 90px)
   line-height: 0
-  display: flex
   flex-wrap: wrap
   img
     width: 100%
