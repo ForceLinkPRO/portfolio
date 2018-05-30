@@ -11,6 +11,14 @@ function Show() {
   }
 };
 
+var StatusImgSlider = true;
+function ShowImgSlider(e) {
+  if( StatusImgSlider && $(event.target).is(".popup") ||  $(event.target).is(".fa-times") )  {
+    $(".popup").hide();
+    StatusImgSlider = false;
+  }
+};
+
 $(document).ready(function(){
 isMobile = {
         Android: function() {
@@ -36,11 +44,8 @@ isMobile = {
   $(".btn-open-img").click(function(){
     var img = $(this).closest(".portfolio-item").find("img");
     var src = img.attr('src');
-    $("body").prepend('<div class="popup"><img src="'+src+'" alt="Просматриваемая картинка" /></div>');
-  });
-
-  $(".popup").click(function(){
-    alert("ss");
+    $("body").prepend('<div class="popup" onclick="ShowImgSlider()"><i class="fas fa-times" onclick="ShowImgSlider()"></i><img src="'+src+'" alt="Просматриваемая картинка" /></div>');
+    StatusImgSlider = true;
   });
 
   $(".btn-filter").click(function() {
